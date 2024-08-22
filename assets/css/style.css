@@ -1596,15 +1596,12 @@ textarea.form-input::-webkit-resizer {
 
   .testimonials-avatar-box {
     transform: translate(30px, -30px);
-    border-radius: 20px;
+    border-radius: 50%;
   }
 
   .testimonials-avatar-box img {
     width: 80px;
-<<<<<<< HEAD
     border-radius: 50%;
-=======
->>>>>>> 358ad5a52324e38842562290c92fff5779a9518e
   }
 
   .testimonials-item-title {
