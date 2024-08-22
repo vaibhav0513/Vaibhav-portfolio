@@ -1,9 +1,9 @@
 /*-----------------------------------*\
-  #style.css
+                #style.css
 \*-----------------------------------*/
 
 /*-----------------------------------*\
-  #CUSTOM PROPERTY
+                  #CUSTOM PROPERTY
 \*-----------------------------------*/
 
 :root {
@@ -13,17 +13,8 @@
 
   /* gradient */
 
-  --bg-gradient-onyx: linear-gradient(
-    to bottom right,
-    hsl(240, 1%, 25%) 3%,
-    hsl(0, 0%, 19%) 97%
-  );
-  --bg-gradient-jet: linear-gradient(
-      to bottom right,
-      hsla(240, 1%, 18%, 0.251) 0%,
-      hsla(240, 2%, 11%, 0) 100%
-    ),
-    hsl(240, 2%, 13%);
+  --bg-gradient-onyx: #e84a5f;
+  --bg-gradient-jet: #FFFFFF;
 
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
@@ -37,41 +28,26 @@
       hsla(35, 100%, 68%, 0) 59.86%
     ),
     hsl(240, 2%, 13%);
-<<<<<<< HEAD
-  /* 
-=======
 
->>>>>>> 358ad5a52324e38842562290c92fff5779a9518e
-  --border-gradient-onyx: linear-gradient(
-    to bottom right,
-    hsl(0, 0%, 25%) 0%,
-    hsla(0, 0%, 25%, 0) 50%
-<<<<<<< HEAD
-  ); */
-=======
-  );
->>>>>>> 358ad5a52324e38842562290c92fff5779a9518e
   --text-gradient-yellow: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-  /* --text-gradient-yellow: linear-gradient(
-    to right,
-    hsl(45, 100%, 72%),
-    hsl(35, 100%, 68%)
-  ); */
-
+  
   /* solid */
+  --jet: #D5534D;
+  /* box color  */
+  --onyx: #141010; 
+  --eerie-black-1: #FEFEFE;
+  --eerie-black-2: #EFECE3;
+  /* background color  */
+  --smoky-black: #D5534D;
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --white-1: #fcfefe;
+  --white-2: #141010;
+  --orange-yellow-crayola: #240041;
+  --vegas-gold: #f95959;
+  --light-gray: #141010;
+  --light-gray-70: #141010;
   --bittersweet-shimmer: hsl(0, 43%, 51%);
+
 
   /**
    * typography
@@ -97,7 +73,7 @@
   --fw-600: 600;
 
   /*** shadow */
-
+  
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
@@ -485,9 +461,8 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: #FEFEFE;
   backdrop-filter: blur(10px);
-  border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
@@ -502,7 +477,7 @@ main {
 }
 
 .navbar-link {
-  color: var(--light-gray);
+  color: black;
   font-size: var(--fs-8);
   padding: 20px 7px;
   transition: color var(--transition-1);
@@ -514,7 +489,7 @@ main {
 }
 
 .navbar-link.active {
-  color: var(--orange-yellow-crayola);
+  color: var(--bg-gradient-onyx);
 }
 
 /*-----------------------------------*\
@@ -553,7 +528,7 @@ main {
 .skill-button {
   background: var(--bg-gradient-onyx);
   border: none;
-  color: var(--orange-yellow-crayola);
+  color: var(--eerie-black-1);
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -756,7 +731,7 @@ main {
   position: relative;
   padding: 15px;
   margin: 15px 12px;
-  border: 1px solid var(--jet);
+  /* border: 1px solid var(--jet); */
   border-radius: 14px;
   box-shadow: var(--shadow-5);
   transform: scale(1.2);
@@ -774,7 +749,6 @@ main {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: var(--onyx);
   border-radius: 8px;
   width: 32px;
   height: 32px;
