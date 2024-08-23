@@ -585,7 +585,7 @@
           <section class="timeline">
             <div class="title-wrapper">
               <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
+                <ion-icon name="podium-outline"></ion-icon>
               </div>
               <h3 class="h3">Experience</h3>
             </div>
@@ -653,7 +653,7 @@
           </section> -->
         </article>
 
-        <!----------------------------------- #PORTFOLIO -------------- -------------------->
+        <!----------------------------------- #PORTFOLIO ---------------------------------->
 
         <article class="portfolio" data-page="portfolio">
           <header>
@@ -715,7 +715,8 @@
                 data-filter-item
                 data-category="web development"
               >
-                <a href="https://rudra-veer-website.vercel.app/">
+                <a href="https://rudra-veer-website.vercel.app/" target="_blank">
+                  
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -724,12 +725,15 @@
                       src="./assets/images/port-1.PNG"
                       alt="rudra"
                       loading="lazy"
-                      target="_blank"
                     />
                   </figure>
-                  <h3 class="project-title">NGO Website</h3>
+                  <h3 class="project-title">RudraVeer Website</h3>
                   <p class="project-category">Web development</p>
                 </a>
+                <!-- share icon  -->
+                <div class="project-share-icon" onclick="openModal()">
+                    <ion-icon name="share-outline"></ion-icon>
+                </div>
               </li>
 
               <li
@@ -737,12 +741,11 @@
                 data-filter-item
                 data-category="web development"
               >
-                <a href="https://vaibhav-tupe-portfolio.netlify.app/">
+                <a href="https://vaibhav-tupe-portfolio.netlify.app/" target="_blank">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
                     </div>
-
                     <img
                       src="./assets/images/port-2.png"
                       alt="orizon"
@@ -752,7 +755,27 @@
                   <h3 class="project-title">My Portfolio</h3>
                   <p class="project-category">Web development</p>
                 </a>
+                <!-- share icon  -->
+                <div class="project-share-icon" onclick="openModal()">
+                  <ion-icon name="share-outline"></ion-icon>
+                </div>
               </li>
+              
+                <!-- Modal Structure  -->
+                <div id="techstackModal" class="project-modal">
+                  <div class="project-overlay">
+                  <div class="project-modal-content">
+                      <span class="project-close" onclick="closeModal()">&times;</span>
+                        <P class="project-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores doloremque commodi dignissimos ipsam facere amet! Neque eligendi magnam nihil error?</P>
+                        <h2 class="project-info">Tech Stack Used</h2>
+                        <ol class="tech-stack-list">
+                          <li>React</li>
+                          <li>Tailwind CSS</li>
+                          <li>Router-dom</li>
+                          </ol>
+                    </div>
+                  </div>
+                  </div> 
 
               <!-- <li
                 class="project-item active"
