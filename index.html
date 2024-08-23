@@ -732,7 +732,7 @@
                 </a>
                 <!-- share icon  -->
                 <div class="project-share-icon" onclick="openModal()">
-                    <ion-icon name="share-outline"></ion-icon>
+                    <ion-icon name="share-outline" onclick="openProject1()"></ion-icon>
                 </div>
               </li>
 
@@ -757,16 +757,62 @@
                 </a>
                 <!-- share icon  -->
                 <div class="project-share-icon" onclick="openModal()">
-                  <ion-icon name="share-outline"></ion-icon>
+                  <ion-icon name="share-outline" onclick="openProject2()"></ion-icon>
                 </div>
               </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://vaibhav-tupe-portfolio.netlify.app/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/port-2.png"
+                      alt="orizon"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">My Portfolio</h3>
+                  <p class="project-category">Web development</p>
+                </a>
+                <!-- share icon  -->
+                <div class="project-share-icon" onclick="openModal()">
+                  <ion-icon name="share-outline" onclick="openProject3()"></ion-icon>
+                </div>
+              </li>
+              
               
                 <!-- Modal Structure  -->
                 <div id="techstackModal" class="project-modal">
                   <div class="project-overlay">
+                    <div class="project-modal-content">
+                      <span class="project-close" onclick="closeModal()">&times;</span>
+                      <p id="projectDescription1" class="project-description"></p>
+                      <h2 id="projectInfo1" class="project-info"></h2>
+                      <ol id="techStackList1" class="tech-stack-list"></ol>
+                
+                      <p id="projectDescription2" class="project-description"></p>
+                      <h2 id="projectInfo2" class="project-info"></h2>
+                      <ol id="techStackList2" class="tech-stack-list"></ol>
+                
+                      <p id="projectDescription3" class="project-description"></p>
+                      <h2 id="projectInfo3" class="project-info"></h2>
+                      <ol id="techStackList3" class="tech-stack-list"></ol>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <!-- <div id="techstackModal" class="project-modal">
+                  <div class="project-overlay">
                   <div class="project-modal-content">
                       <span class="project-close" onclick="closeModal()">&times;</span>
-                        <P class="project-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores doloremque commodi dignissimos ipsam facere amet! Neque eligendi magnam nihil error?</P>
+                        <P class="project-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</P>
                         <h2 class="project-info">Tech Stack Used</h2>
                         <ol class="tech-stack-list">
                           <li>React</li>
@@ -775,7 +821,7 @@
                           </ol>
                     </div>
                   </div>
-                  </div> 
+                  </div>  -->
 
               <!-- <li
                 class="project-item active"
