@@ -119,7 +119,56 @@ for (let i = 0; i < formInputs.length; i++) {
 }
 
 //portfolio modal 
-function openModal() {
+function openProject1() {
+  openModal(
+    ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus explicabo quisquam cum expedita nemo.", "", ""], 
+    ["Tech Stack Used", "", ""], 
+    [
+      ["React", "Tailwind CSS", "Router-dom"], 
+      [],                                      
+      []                                       
+    ]
+  );
+}
+
+function openProject2() {
+  openModal(
+    ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus explicabo quisquam cum expedita nemo.", "", ""],
+    ["", "Tech Stack Used", ""],  
+    [
+      [],                                      
+      ["Vue", "Bootstrap", "Vuex"],            
+      []                                       
+    ]
+  );
+}
+
+function openProject3() {
+  openModal(
+    ["", "", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus explicabo quisquam cum expedita nemo."], 
+    ["", "", "Tech Stack"],  
+    [
+      [],                                     
+      [],                                     
+      ["Angular", "Material UI", "NgRx"]      
+    ]
+  );
+}
+
+function openModal(descriptions, infoTitles, techStacks) {
+  for (let i = 1; i <= 3; i++) {
+    document.getElementById(`projectDescription${i}`).innerText = descriptions[i - 1];
+    document.getElementById(`projectInfo${i}`).innerText = infoTitles[i - 1];
+    const techStackList = document.getElementById(`techStackList${i}`);
+    techStackList.innerHTML = '';
+
+    techStacks[i - 1].forEach(stackItem => {
+      const li = document.createElement("li");
+      li.innerText = stackItem;
+      techStackList.appendChild(li);
+    });
+  }
+
   document.getElementById("techstackModal").style.display = "block";
 }
 
@@ -127,14 +176,12 @@ function closeModal() {
   document.getElementById("techstackModal").style.display = "none";
 }
 
-// Close the modal when clicking outside of it
 window.onclick = function(event) {
   const modal = document.getElementById("techstackModal");
   if (event.target === modal) {
     modal.style.display = "none";
   }
 }
-
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
