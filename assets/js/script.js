@@ -122,7 +122,7 @@ for (let i = 0; i < formInputs.length; i++) {
 function openProject1() {
   openModal(
     ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus explicabo quisquam cum expedita nemo.", "", ""], 
-    ["Tech Stack Used", "", ""], 
+    ["Tech Stack Used :", "", ""], 
     [
       ["React", "Tailwind CSS", "Router-dom"], 
       [],                                      
@@ -134,10 +134,10 @@ function openProject1() {
 function openProject2() {
   openModal(
     ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus explicabo quisquam cum expedita nemo.", "", ""],
-    ["", "Tech Stack Used", ""],  
+    ["", "Tech Stack Used :", ""],  
     [
       [],                                      
-      ["Vue", "Bootstrap", "Vuex"],            
+      ["HTML", "CSS", "JS"],            
       []                                       
     ]
   );
@@ -146,11 +146,11 @@ function openProject2() {
 function openProject3() {
   openModal(
     ["", "", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus explicabo quisquam cum expedita nemo."], 
-    ["", "", "Tech Stack"],  
+    ["", "", "Tech Stack Used :"],  
     [
       [],                                     
       [],                                     
-      ["Angular", "Material UI", "NgRx"]      
+      ["HTML", "CSS"],     
     ]
   );
 }
