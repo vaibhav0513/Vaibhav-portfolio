@@ -121,11 +121,12 @@ for (let i = 0; i < formInputs.length; i++) {
 //portfolio modal 
 function openProject1() {
   openModal(
-    ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus explicabo quisquam cum expedita nemo.", "", ""], 
-    ["Tech Stack Used :", "", ""], 
+    "Developed a comprehensive NGO website named Rudraveer NGO using the ReactJS, Tailwind CSS , designed to facilitate community engagement and promote impactful programs in education, healthcare, women empowerment, and environmental conservation.", 
+    ["Key feature 1", "", ""],
+    ["", "Tech Stack Used :", ""],  
     [
-      ["React", "Tailwind CSS", "Router-dom"], 
       [],                                      
+      ["ReactJS", "Tailwind CSS"],            
       []                                       
     ]
   );
@@ -133,11 +134,12 @@ function openProject1() {
 
 function openProject2() {
   openModal(
-    ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus explicabo quisquam cum expedita nemo.", "", ""],
+    "Created a dynamic portfolio website showcasing my skills and projects using modern web technologies, designed to highlight my expertise in web development, including projects built with HTML, CSS, JavaScript, React, and the MERN stack.", 
+    ["Key feature 2", "", ""],
     ["", "Tech Stack Used :", ""],  
     [
       [],                                      
-      ["HTML", "CSS", "JS"],            
+      ["HTML", "CSS", "JavaScript"],            
       []                                       
     ]
   );
@@ -145,33 +147,83 @@ function openProject2() {
 
 function openProject3() {
   openModal(
-    ["", "", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloribus explicabo quisquam cum expedita nemo."], 
-    ["", "", "Tech Stack Used :"],  
+    "Developed an engaging moving car animation using HTML and CSS, showcasing my ability to create dynamic visual experiences and implement smooth transitions and animations in web design.", 
+    ["Key feature 3", "", ""],
+    ["", "Tech Stack Used :", ""],  
     [
-      [],                                     
-      [],                                     
-      ["HTML", "CSS"],     
+      [],                                      
+      ["HTML", "CSS", "JavaScript"],            
+      []                                       
     ]
   );
 }
 
-function openModal(descriptions, infoTitles, techStacks) {
-  for (let i = 1; i <= 3; i++) {
-    document.getElementById(`projectDescription${i}`).innerText = descriptions[i - 1];
-    document.getElementById(`projectInfo${i}`).innerText = infoTitles[i - 1];
+function openProject4() {
+  openModal(
+    "Vblogger offers insightful blogs on the latest trends in technology, lifestyle tips, and startup stories. With a user-friendly interface, readers can easily navigate various topics. The dedicated admin page allows for quick creation and management of new posts, ensuring fresh and relevant content. Stay updated on what matters to you!", 
+    ["Key feature 4", "", ""],
+    ["", "Tech Stack Used :", ""],  
+    [
+      [],                                      
+      ["React JS", "Tailwind CSS", "MongoDB"],            
+      []                                       
+    ]
+  );
+}
+
+function openProject5() {
+  openModal(
+    "Developed a fully functional eCommerce website named FashionHaven using the MERN stack (MongoDB, Express.js, React, Node.js), providing a seamless online shopping experience for users.", 
+    ["User Authentication: Secure sign-up and login for user accounts. Order Management: Users can browse and place orders efficiently. Shopping Cart: Intuitive Add to Cart functionality for item management. Admin Dashboard: Admin page for product management and order monitoring. Order Tracking: Real-time tracking of purchase statuses.", "", ""],
+    ["", "Tech Stack Used :", ""],  
+    [
+      [],                                      
+      ["React", "Tailwind CSS", "MERN Stack (MongoDB, Express.js, React, Node.js)"],         
+      []                                       
+    ]
+  );
+}
+
+function openModal(overview, descriptions, infoTitles, techStacks) {
+  const maxLength = Math.max(descriptions.length, infoTitles.length, techStacks.length);
+
+  // Set project overview
+  const overviewElement = document.getElementById("projectOverview");
+  overviewElement.innerText = overview || ''; // Clear if empty
+
+  for (let i = 1; i <= maxLength; i++) {
+    const descriptionElement = document.getElementById(`projectDescription${i}`);
+    const infoElement = document.getElementById(`projectInfo${i}`);
     const techStackList = document.getElementById(`techStackList${i}`);
-    techStackList.innerHTML = '';
 
-    techStacks[i - 1].forEach(stackItem => {
-      const li = document.createElement("li");
-      li.innerText = stackItem;
-      techStackList.appendChild(li);
-    });
+    // Ensure the elements exist before attempting to update them
+    if (descriptionElement) {
+      descriptionElement.innerText = descriptions[i - 1] || ''; // Clear if empty
+    }
+
+    if (infoElement) {
+      infoElement.innerText = infoTitles[i - 1] || ''; // Clear if empty
+    }
+
+    // Clear and update tech stack list
+    if (techStackList) {
+      techStackList.innerHTML = '';
+
+      if (techStacks[i - 1] && techStacks[i - 1].length > 0) {
+        techStacks[i - 1].forEach(stackItem => {
+          const li = document.createElement("li");
+          li.innerText = stackItem;
+          techStackList.appendChild(li);
+        });
+      }
+    }
   }
-
+  // Display the modal
   document.getElementById("techstackModal").style.display = "block";
 }
 
+
+// Closing modal
 function closeModal() {
   document.getElementById("techstackModal").style.display = "none";
 }

@@ -218,8 +218,9 @@
 
             <div class="skills-container">
               <button class="skill-button">HTML | CSS</button>
+              <button class="skill-button">Tailwind CSS</button>
               <button class="skill-button">BootStrap</button>
-              <button class="skill-button">Javascript</button>
+              <button class="skill-button">JavaScript</button>
               <button class="skill-button">React.JS</button>
               <button class="skill-button">Java</button>
               <button class="skill-button">PHP</button>
@@ -559,7 +560,7 @@
                 <h4 class="h4 timeline-item-title">University Of Mumbai</h4>
                 <span>2020 — 2023</span>
                 <p class="timeline-text">B.E in Computer Engineering</p>
-                <p class="timeline-text">Pointer : 8.14</p>
+                <p class="timeline-text">Pointer : 8.62</p>
               </li>
 
               <li class="timeline-item">
@@ -573,9 +574,9 @@
 
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">
-                  Maharashtra State Board of Technical Education
+                  Maharashtra State Board of Secondary & Higher Secondary Education
                 </h4>
-                <span>0000 — 0000</span>
+                <span>2013 — 2014</span>
                 <p class="timeline-text">S.S.C</p>
                 <p class="timeline-text">Percentage : 61.40%</p>
               </li>
@@ -594,13 +595,19 @@
                 <h4 class="h4 timeline-item-title">Tech Sierra</h4>
                 <span>October 2023 — May 2024</span>
                 <p class="timeline-text">
-                  Designed and managed React-based UI for responsive web page,
-                  ensuring a smooth user experience and troubleshoot issues and
-                  optimize performance for enhanced functionality
-                </p>
+                  <ul class="show-bullets"> 
+                    <li>Worked on the development of the Marawadi matrimony website at Tech Sierra <br> using the MERN stack.</li>
+                    <li>Created and implemented the registration form and profile section for the website.</li>
+                    <li>Monitored and ensured the proper functionality of the website across various modules.</li>
+                    <li>Identified and reported bugs to senior team members for resolution.</li>
+                    <li>Contributed to debugging and quality assurance processes.</li>
+                  </ul>
+                </p>                
               </li>
             </ol>
           </section>
+          
+          
 
           <!-- <section class="skill">
             <h3 class="h3 skills-title">My skills</h3>
@@ -713,7 +720,7 @@
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="web development"
+                data-category="front end"
               >
                 <a href="https://rudra-veer-website.vercel.app/" target="_blank">
                   
@@ -785,61 +792,93 @@
                   <ion-icon name="share-outline" onclick="openProject3()"></ion-icon>
                 </div>
               </li>
-              
-              
-                <!-- Modal Structure  -->
-                <div id="techstackModal" class="project-modal">
-                  <div class="project-overlay">
-                    <div class="project-modal-content">
-                      <span class="project-close" onclick="closeModal()">&times;</span>
-                      <p id="projectDescription1" class="project-description"></p>
-                      <h2 id="projectInfo1" class="project-info"></h2>
-                      <ol id="techStackList1" class="tech-stack-list"></ol>
-                
-                      <p id="projectDescription2" class="project-description"></p>
-                      <h2 id="projectInfo2" class="project-info"></h2>
-                      <ol id="techStackList2" class="tech-stack-list"></ol>
-                
-                      <p id="projectDescription3" class="project-description"></p>
-                      <h2 id="projectInfo3" class="project-info"></h2>
-                      <ol id="techStackList3" class="tech-stack-list"></ol>
-                    </div>
-                  </div>
-                </div>
-              
-              <!-- <li
+
+              <li
                 class="project-item active"
                 data-filter-item
-                data-category="applications"
+                data-category="web development"
               >
-                <a href="#">
+                <a href="https://moving-obh5z9xrl-vaibhav-tupes-projects.vercel.app/" target="_blank">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
                       <ion-icon name="eye-outline"></ion-icon>
                     </div>
-
                     <img
-                      src="./assets/images/project-8.jpg"
-                      alt="task manager"
+                      src="./assets/images/port-4.png"
+                      alt="orizon"
                       loading="lazy"
                     />
                   </figure>
-
-                  <h3 class="project-title">Task Manager</h3>
-
-                  <p class="project-category">Applications</p>
+                  <h3 class="project-title">V-Blogger</h3>
+                  <p class="project-category">Web Development</p>
                 </a>
-              </li> -->
-  
+                <!-- share icon  -->
+                <div class="project-share-icon" onclick="openModal()">
+                  <ion-icon name="share-outline" onclick="openProject4()"></ion-icon>
+                </div>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://moving-obh5z9xrl-vaibhav-tupes-projects.vercel.app/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/port-5.png"
+                      alt="orizon"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">FashionHaven E-commerce</h3>
+                  <p class="project-category">Web Development</p>
+                </a>
+                <!-- share icon  -->
+                <div class="project-share-icon" onclick="openModal()">
+                  <ion-icon name="share-outline" onclick="openProject5()"></ion-icon>
+                </div>
+              </li>
+              
+                <!-- Modal Structure  -->
+                <div id="techstackModal" class="project-modal">
+                  <div class="project-overlay">
+                  <div class="project-modal-content">
+                  <span class="project-close" onclick="closeModal()">&times;</span>
+
+                    <!-- Project Overview Section -->
+                    <h3 id="projectOverviewTitle" class="project-overview-title">Project Overview:</h3>
+                    <p id="projectOverview" class="project-overview"></p>
+
+                    <!-- Key Features Section -->
+                    <h3 id="keyFeaturesTitle" class="key-features-title">Key Features :</h3>
+                    <ul id="keyFeaturesList" class="key-features-list"></ul>
+
+                    <!-- Info Title Section -->
+                    <h2 id="projectInfo1" class="project-info"></h2>
+                    <p id="projectDescription1" class="project-description"></p>
+                    <ol id="techStackList1" class="tech-stack-list"></ol>
+
+                    <h2 id="projectInfo2" class="project-info"></h2>
+                    <p id="projectDescription2" class="project-description"></p>
+                    <ol id="techStackList2" class="tech-stack-list"></ol>
+
+                    <h2 id="projectInfo3" class="project-info"></h2>
+                    <p id="projectDescription3" class="project-description"></p>
+                    <ol id="techStackList3" class="tech-stack-list"></ol>
+                    </div>
+                    </div>
+                </div>
             </ul>
           </section>
         </article>
 
         
 
-        <!--
-        - #CONTACT
-      -->
+        <!--- #CONTACT  -->
 
         <article class="contact" data-page="contact">
           <header>
