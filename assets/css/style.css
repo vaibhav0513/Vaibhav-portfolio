@@ -907,14 +907,16 @@ main {
 }
 
 .timeline-text {
-  color: var(--light-gray);
+  color: var(--jet);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
-/**
- * skills 
- */
+.show-bullets li {
+  list-style-type: disc; 
+}
+
+/*** skills */
 
 .skills-title {
   margin-bottom: 20px;
@@ -1168,12 +1170,27 @@ main {
   cursor: pointer;
 }
 
+.project-overview-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--jet);
+}
+
 .project-description {
-  font-size: 16px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.project-overview {
+  font-size: 14px;
   margin-bottom: 10px;
 }
 
 .project-info {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--jet);
+}
+.key-features-title{
   font-size: 20px;
   margin-bottom: 15px;
   color: var(--jet);
