@@ -122,7 +122,7 @@ for (let i = 0; i < formInputs.length; i++) {
 function openProject1() {
   openModal(
     "Developed a comprehensive NGO website named Rudraveer NGO using the ReactJS, Tailwind CSS , designed to facilitate community engagement and promote impactful programs in education, healthcare, women empowerment, and environmental conservation.", 
-    ["Key feature 1", "", ""],
+    ["Key feature", "", ""],
     ["", "Tech Stack Used :", ""],  
     [
       [],                                      
@@ -134,8 +134,8 @@ function openProject1() {
 
 function openProject2() {
   openModal(
-    "Created a dynamic portfolio website showcasing my skills and projects using modern web technologies, designed to highlight my expertise in web development, including projects built with HTML, CSS, JavaScript, React, and the MERN stack.", 
-    ["Key feature 2", "", ""],
+    "I built my personal portfolio website using HTML, CSS, and JavaScript to showcase my skills, projects, and work experience", 
+    ["Key feature", "", ""],
     ["", "Tech Stack Used :", ""],  
     [
       [],                                      
@@ -161,7 +161,7 @@ function openProject3() {
 function openProject4() {
   openModal(
     "Vblogger offers insightful blogs on the latest trends in technology, lifestyle tips, and startup stories. With a user-friendly interface, readers can easily navigate various topics. The dedicated admin page allows for quick creation and management of new posts, ensuring fresh and relevant content. Stay updated on what matters to you!", 
-    ["Key feature 4", "", ""],
+    ["Key feature", "", ""],
     ["", "Tech Stack Used :", ""],  
     [
       [],                                      
@@ -179,6 +179,19 @@ function openProject5() {
     [
       [],                                      
       ["React", "Tailwind CSS", "MERN Stack (MongoDB, Express.js, React, Node.js)"],         
+      []                                       
+    ]
+  );
+}
+
+function openProject6() {
+  openModal(
+    "I built a 3D house animation project using HTML, CSS, and JavaScript.", 
+    ["Key feature", "", ""],
+    ["", "Tech Stack Used :", ""],  
+    [
+      [],                                      
+      ["HTML", "CSS", "JavaScript"],            
       []                                       
     ]
   );
