@@ -118,135 +118,318 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-//portfolio modal 
+//portfolio modal
 function openProject1() {
-  openModal(
-    "Developed a comprehensive NGO website named Rudraveer NGO using the ReactJS, Tailwind CSS , designed to facilitate community engagement and promote impactful programs in education, healthcare, women empowerment, and environmental conservation.", 
-    ["Key feature", "", ""],
-    ["", "Tech Stack Used :", ""],  
-    [
-      [],                                      
-      ["ReactJS", "Tailwind CSS"],            
-      []                                       
-    ]
-  );
-}
+  const projectOverview =
+    "I built my personal portfolio website using HTML, CSS, and JavaScript to showcase my skills, projects, and work experience.";
 
-function openProject2() {
-  openModal(
-    "I built my personal portfolio website using HTML, CSS, and JavaScript to showcase my skills, projects, and work experience", 
-    ["Key feature", "", ""],
-    ["", "Tech Stack Used :", ""],  
-    [
-      [],                                      
-      ["HTML", "CSS", "JavaScript"],            
-      []                                       
-    ]
-  );
-}
+  const keyFeatures = [
+    "1. Community Engagement: Encourages member interaction.",
+    "2. Program Promotion: Showcases initiatives in education, healthcare, and women empowerment.",
+    "3. User-Friendly Interface: Designed with ReactJS and Tailwind CSS for a seamless experience.",
+    "4. Responsive Design: Optimized for accessibility on various devices.",
+    "5. Impactful Content: Shares stories and updates on the NGO’s programs and events.",
+  ]; // List of key features
 
-function openProject3() {
-  openModal(
-    "Developed an engaging moving car animation using HTML and CSS, showcasing my ability to create dynamic visual experiences and implement smooth transitions and animations in web design.", 
-    ["Key feature 3", "", ""],
-    ["", "Tech Stack Used :", ""],  
-    [
-      [],                                      
-      ["HTML", "CSS", "JavaScript"],            
-      []                                       
-    ]
-  );
-}
+  const projectInfo1 = "Tech Stack Used :";
+  const techStack1 = ["ReactJS", "Tailwind CSS"];
 
-function openProject4() {
-  openModal(
-    "Vblogger offers insightful blogs on the latest trends in technology, lifestyle tips, and startup stories. With a user-friendly interface, readers can easily navigate various topics. The dedicated admin page allows for quick creation and management of new posts, ensuring fresh and relevant content. Stay updated on what matters to you!", 
-    ["Key feature", "", ""],
-    ["", "Tech Stack Used :", ""],  
-    [
-      [],                                      
-      ["React JS", "Tailwind CSS", "MongoDB"],            
-      []                                       
-    ]
-  );
-}
+  // Set the project overview
+  document.getElementById("projectOverview").textContent = projectOverview;
 
-function openProject5() {
-  openModal(
-    "Developed a fully functional eCommerce website named FashionHaven using the MERN stack (MongoDB, Express.js, React, Node.js), providing a seamless online shopping experience for users.", 
-    ["User Authentication: Secure sign-up and login for user accounts. Order Management: Users can browse and place orders efficiently. Shopping Cart: Intuitive Add to Cart functionality for item management. Admin Dashboard: Admin page for product management and order monitoring. Order Tracking: Real-time tracking of purchase statuses.", "", ""],
-    ["", "Tech Stack Used :", ""],  
-    [
-      [],                                      
-      ["React", "Tailwind CSS", "MERN Stack (MongoDB, Express.js, React, Node.js)"],         
-      []                                       
-    ]
-  );
-}
+  // Populate the key features list
+  const keyFeaturesList = document.getElementById("keyFeaturesList");
+  keyFeaturesList.innerHTML = ""; // Clear any existing content
+  keyFeatures.forEach((feature) => {
+    const li = document.createElement("li");
+    li.textContent = feature;
+    keyFeaturesList.appendChild(li);
+  });
 
-function openProject6() {
-  openModal(
-    "I built a 3D house animation project using HTML, CSS, and JavaScript.", 
-    ["Key feature", "", ""],
-    ["", "Tech Stack Used :", ""],  
-    [
-      [],                                      
-      ["HTML", "CSS", "JavaScript"],            
-      []                                       
-    ]
-  );
-}
+  // Set the project information
+  document.getElementById("projectInfo1").textContent = projectInfo1;
 
-function openModal(overview, descriptions, infoTitles, techStacks) {
-  const maxLength = Math.max(descriptions.length, infoTitles.length, techStacks.length);
+  // Populate the tech stack list
+  const techStackList1 = document.getElementById("techStackList1");
+  techStackList1.innerHTML = ""; // Clear any existing content
+  techStack1.forEach((tech) => {
+    const li = document.createElement("li");
+    li.textContent = tech;
+    techStackList1.appendChild(li);
+  });
 
-  // Set project overview
-  const overviewElement = document.getElementById("projectOverview");
-  overviewElement.innerText = overview || ''; // Clear if empty
-
-  for (let i = 1; i <= maxLength; i++) {
-    const descriptionElement = document.getElementById(`projectDescription${i}`);
-    const infoElement = document.getElementById(`projectInfo${i}`);
-    const techStackList = document.getElementById(`techStackList${i}`);
-
-    // Ensure the elements exist before attempting to update them
-    if (descriptionElement) {
-      descriptionElement.innerText = descriptions[i - 1] || ''; // Clear if empty
-    }
-
-    if (infoElement) {
-      infoElement.innerText = infoTitles[i - 1] || ''; // Clear if empty
-    }
-
-    // Clear and update tech stack list
-    if (techStackList) {
-      techStackList.innerHTML = '';
-
-      if (techStacks[i - 1] && techStacks[i - 1].length > 0) {
-        techStacks[i - 1].forEach(stackItem => {
-          const li = document.createElement("li");
-          li.innerText = stackItem;
-          techStackList.appendChild(li);
-        });
-      }
-    }
-  }
-  // Display the modal
+  // Open the modal
   document.getElementById("techstackModal").style.display = "block";
 }
 
+function openProject2() {
+  const projectOverview =
+    "I built my personal portfolio website using HTML, CSS, and JavaScript to showcase my skills, projects, and work experience.";
 
-// Closing modal
+  const keyFeatures = [
+    "1. Skill Showcase: Highlights technical skills and expertise.",
+    "2. Project Display: Features a collection of projects with descriptions and links.",
+    "3. Work Experience: Details past work experiences and achievements.",
+    "4. Responsive Design: Optimized for viewing on desktops and mobile devices.",
+    "5. Interactive Elements: Engaging user interface with smooth transitions.",
+  ]; // List of key features
+
+  const projectInfo1 = "Tech Stack Used :";
+  const techStack1 = ["HTML", "CSS", "JavaScript"];
+
+  // Set the project overview
+  document.getElementById("projectOverview").textContent = projectOverview;
+
+  // Populate the key features list
+  const keyFeaturesList = document.getElementById("keyFeaturesList");
+  keyFeaturesList.innerHTML = ""; // Clear any existing content
+  keyFeatures.forEach((feature) => {
+    const li = document.createElement("li");
+    li.textContent = feature;
+    keyFeaturesList.appendChild(li);
+  });
+
+  // Set the project information
+  document.getElementById("projectInfo1").textContent = projectInfo1;
+
+  // Populate the tech stack list
+  const techStackList1 = document.getElementById("techStackList1");
+  techStackList1.innerHTML = ""; // Clear any existing content
+  techStack1.forEach((tech) => {
+    const li = document.createElement("li");
+    li.textContent = tech;
+    techStackList1.appendChild(li);
+  });
+
+  // Open the modal
+  document.getElementById("techstackModal").style.display = "block";
+}
+
+function openProject3() {
+  const projectOverview =
+    "Developed an engaging moving car animation using HTML and CSS, showcasing my ability to create dynamic visual experiences and implement smooth transitions and animations in web design.";
+
+  const keyFeatures = [
+    "1. Dynamic Animation: Engaging moving car animation created with HTML and CSS.",
+    "2. Smooth Transitions: Implemented fluid motion for realistic movement.",
+    "3. Lightweight: Efficient code for fast loading times.",
+  ]; // List of key features
+
+  const projectInfo1 = "Tech Stack Used :";
+  const techStack1 = ["HTML", "CSS", "JavaScript"];
+
+  // Set the project overview
+  document.getElementById("projectOverview").textContent = projectOverview;
+
+  // Populate the key features list
+  const keyFeaturesList = document.getElementById("keyFeaturesList");
+  keyFeaturesList.innerHTML = ""; // Clear any existing content
+  keyFeatures.forEach((feature) => {
+    const li = document.createElement("li");
+    li.textContent = feature;
+    keyFeaturesList.appendChild(li);
+  });
+
+  // Set the project information
+  document.getElementById("projectInfo1").textContent = projectInfo1;
+
+  // Populate the tech stack list
+  const techStackList1 = document.getElementById("techStackList1");
+  techStackList1.innerHTML = ""; // Clear any existing content
+  techStack1.forEach((tech) => {
+    const li = document.createElement("li");
+    li.textContent = tech;
+    techStackList1.appendChild(li);
+  });
+
+  // Open the modal
+  document.getElementById("techstackModal").style.display = "block";
+}
+
+function openProject4() {
+  const projectOverview =
+    "V-blogger offers insightful blogs on the latest trends in technology, lifestyle tips, and startup stories. With a user-friendly interface, readers can easily navigate various topics. The dedicated admin page allows for quick creation and management of new posts, ensuring fresh and relevant content. Stay updated on what matters to you!";
+
+  const keyFeatures = [
+    "1. Diverse Content: Blogs on technology, lifestyle, and startups.",
+    "2. User-Friendly Interface: Easy navigation for a seamless experience.",
+    "3. Admin Page: Quick post creation and management.",
+    "4. Regular Updates: Timely and engaging articles.",
+    "5. Responsive Design: Optimized for desktop and mobile.",
+  ]; // List of key features
+
+  const projectInfo1 = "Tech Stack Used :";
+  const techStack1 = ["React", "Tailwind CSS", "MongoDB"];
+
+  // Set the project overview
+  document.getElementById("projectOverview").textContent = projectOverview;
+
+  // Populate the key features list
+  const keyFeaturesList = document.getElementById("keyFeaturesList");
+  keyFeaturesList.innerHTML = ""; // Clear any existing content
+  keyFeatures.forEach((feature) => {
+    const li = document.createElement("li");
+    li.textContent = feature;
+    keyFeaturesList.appendChild(li);
+  });
+
+  // Set the project information
+  document.getElementById("projectInfo1").textContent = projectInfo1;
+
+  // Populate the tech stack list
+  const techStackList1 = document.getElementById("techStackList1");
+  techStackList1.innerHTML = ""; // Clear any existing content
+  techStack1.forEach((tech) => {
+    const li = document.createElement("li");
+    li.textContent = tech;
+    techStackList1.appendChild(li);
+  });
+
+  // Open the modal
+  document.getElementById("techstackModal").style.display = "block";
+}
+
+function openProject5() {
+  const projectOverview =
+    "Developed a fully functional eCommerce website named FashionHaven using the MERN stack (MongoDB, Express.js, React, Node.js), providing a seamless online shopping experience for users.";
+
+  const keyFeatures = [
+    "1. User Authentication: Secure sign-up and login for user accounts.",
+    "2. Order Management: Users can browse and place orders efficiently. ",
+    "3. Shopping Cart: Intuitive Add to Cart functionality for item management.",
+    "4. Admin Dashboard: Admin page for product management and order monitoring. ",
+    "5. Order Tracking: Real-time tracking of purchase statuses. ",
+  ]; // List of key features
+
+  const projectInfo1 = "Tech Stack Used :";
+  const techStack1 = [
+    "React",
+    "Tailwind CSS",
+    "MERN Stack (MongoDB, Express.js, React, Node.js)",
+  ];
+
+  // Set the project overview
+  document.getElementById("projectOverview").textContent = projectOverview;
+
+  // Populate the key features list
+  const keyFeaturesList = document.getElementById("keyFeaturesList");
+  keyFeaturesList.innerHTML = ""; // Clear any existing content
+  keyFeatures.forEach((feature) => {
+    const li = document.createElement("li");
+    li.textContent = feature;
+    keyFeaturesList.appendChild(li);
+  });
+
+  // Set the project information
+  document.getElementById("projectInfo1").textContent = projectInfo1;
+
+  // Populate the tech stack list
+  const techStackList1 = document.getElementById("techStackList1");
+  techStackList1.innerHTML = ""; // Clear any existing content
+  techStack1.forEach((tech) => {
+    const li = document.createElement("li");
+    li.textContent = tech;
+    techStackList1.appendChild(li);
+  });
+
+  // Open the modal
+  document.getElementById("techstackModal").style.display = "block";
+}
+
+function openProject6() {
+  const projectOverview =
+    "I built a 3D house animation project using HTML, CSS, and JavaScript.";
+  const keyFeatures = [
+    "1. Responsive design for various devices",
+    "2. Dynamic product listing with real-time updates",
+    "3. User-friendly navigation and interface",
+    "4. Add to cart functionality with item quantity management",
+  ]; // List of key features
+
+  const projectInfo1 = "Tech Stack Used :";
+  const techStack1 = ["HTML", "CSS", "JavaScript"];
+
+  // Set the project overview
+  document.getElementById("projectOverview").textContent = projectOverview;
+
+  // Populate the key features list
+  const keyFeaturesList = document.getElementById("keyFeaturesList");
+  keyFeaturesList.innerHTML = ""; // Clear any existing content
+  keyFeatures.forEach((feature) => {
+    const li = document.createElement("li");
+    li.textContent = feature;
+    keyFeaturesList.appendChild(li);
+  });
+
+  // Set the project information
+  document.getElementById("projectInfo1").textContent = projectInfo1;
+
+  // Populate the tech stack list
+  const techStackList1 = document.getElementById("techStackList1");
+  techStackList1.innerHTML = ""; // Clear any existing content
+  techStack1.forEach((tech) => {
+    const li = document.createElement("li");
+    li.textContent = tech;
+    techStackList1.appendChild(li);
+  });
+
+  // Open the modal
+  document.getElementById("techstackModal").style.display = "block";
+}
+
+function openProject7() {
+  const projectOverview =
+    "I built a TechPalace ecommerce project using HTML, CSS, and JavaScript.";
+  const keyFeatures = [
+    "1. Responsive design for various devices",
+    "2. Dynamic product listing with real-time updates",
+    "3. User-friendly navigation and interface",
+    "4. Add to cart functionality with item quantity management",
+  ]; // List of key features
+
+  const projectInfo1 = "Tech Stack Used :";
+  const techStack1 = ["HTML", "CSS", "JavaScript"];
+
+  // Set the project overview
+  document.getElementById("projectOverview").textContent = projectOverview;
+
+  // Populate the key features list
+  const keyFeaturesList = document.getElementById("keyFeaturesList");
+  keyFeaturesList.innerHTML = ""; // Clear any existing content
+  keyFeatures.forEach((feature) => {
+    const li = document.createElement("li");
+    li.textContent = feature;
+    keyFeaturesList.appendChild(li);
+  });
+
+  // Set the project information
+  document.getElementById("projectInfo1").textContent = projectInfo1;
+
+  // Populate the tech stack list
+  const techStackList1 = document.getElementById("techStackList1");
+  techStackList1.innerHTML = ""; // Clear any existing content
+  techStack1.forEach((tech) => {
+    const li = document.createElement("li");
+    li.textContent = tech;
+    techStackList1.appendChild(li);
+  });
+
+  // Open the modal
+  document.getElementById("techstackModal").style.display = "block";
+}
+
 function closeModal() {
   document.getElementById("techstackModal").style.display = "none";
 }
 
-window.onclick = function(event) {
+// Modal end
+
+window.onclick = function (event) {
   const modal = document.getElementById("techstackModal");
   if (event.target === modal) {
     modal.style.display = "none";
   }
-}
+};
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
