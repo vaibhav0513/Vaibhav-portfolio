@@ -259,7 +259,7 @@ function openProject4() {
   ]; // List of key features
 
   const projectInfo1 = "Tech Stack Used :";
-  const techStack1 = ["React", "Tailwind CSS", "MongoDB"];
+  const techStack1 = ["Next JS", "Tailwind CSS", "MongoDB"];
 
   // Set the project overview
   document.getElementById("projectOverview").textContent = projectOverview;
