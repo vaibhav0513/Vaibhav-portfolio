@@ -557,9 +557,9 @@ main {
 }
 
 .skill-button {
-  padding: 10px 20px;
+  padding: 8px 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   background-color: var(--bg-gradient-onyx);
   color: #fff;
   font-size: 1rem;
