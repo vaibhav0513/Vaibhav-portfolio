@@ -418,6 +418,49 @@ function openProject7() {
   document.getElementById("techstackModal").style.display = "block";
 }
 
+function openProject8() {
+  const projectOverview =
+    "MoneyMap is a powerful personal finance management web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It empowers users to take full control of their financial life by offering intuitive budgeting, tracking, and analysis tools, along with smart automation for recurring payments and reminders.";
+
+  const keyFeatures = [
+    "1. Monthly Budget & Planned Budget: Set your budget for each month and compare it with planned expenses..",
+    "2. Auto Recurring Bill Payment & Reminders: Automate your utility bill tracking and get notified before due dates..",
+    "3. Product Purchase Log: Store information about your purchases.",
+    "4. Monthly & Yearly Reports: Visual dashboards that give a breakdown of your finances over time..",
+    "5. Birthday Reminders: Stay informed about upcoming birthdays to plan gifts and expenses accordingly.",
+  ]; // List of key features
+
+  const projectInfo1 = "Tech Stack Used :";
+  const techStack1 = ["MERN"];
+
+  // Set the project overview
+  document.getElementById("projectOverview").textContent = projectOverview;
+
+  // Populate the key features list
+  const keyFeaturesList = document.getElementById("keyFeaturesList");
+  keyFeaturesList.innerHTML = ""; // Clear any existing content
+  keyFeatures.forEach((feature) => {
+    const li = document.createElement("li");
+    li.textContent = feature;
+    keyFeaturesList.appendChild(li);
+  });
+
+  // Set the project information
+  document.getElementById("projectInfo1").textContent = projectInfo1;
+
+  // Populate the tech stack list
+  const techStackList1 = document.getElementById("techStackList1");
+  techStackList1.innerHTML = ""; // Clear any existing content
+  techStack1.forEach((tech) => {
+    const li = document.createElement("li");
+    li.textContent = tech;
+    techStackList1.appendChild(li);
+  });
+
+  // Open the modal
+  document.getElementById("techstackModal").style.display = "block";
+}
+
 function closeModal() {
   document.getElementById("techstackModal").style.display = "none";
 }
